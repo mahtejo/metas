@@ -15,7 +15,7 @@
         <body>
             <div class="container">
                 <div class="page-header">
-                    <h1>WeekList
+                    <h1 class="text-info">WeekList
                         <small>O jeito mais fácil de organizar suas metas semanais. </small>
                     </h1>
                 </div>
@@ -72,9 +72,9 @@
                         @for(meta <- metas) {
                             @if(!meta.isAlcancada){
                                 <ul><b>@meta.getNome()</b><br>
-                                    <u>Descrição:</u> @meta.getDescricao()<br>
-                                    <u>Semana:</u> @meta.getSemana()<br>
-                                    <u>Prioridade:</u> @meta.getPrioridade()<br><br>
+                                    <p class="text-info">Descrição:</p> @meta.getDescricao()<br>
+                                    <p class="text-info">Semana:</p> @meta.getSemana()<br>
+                                    <p class="text-info">Prioridade:</p> @meta.getPrioridade()<br><br>
 
                                     <form action="@routes.Application.deleteMetas(meta.getId())" method="post">
                                         <input type="submit" class="btn btn-danger" value="Desistir">
@@ -109,9 +109,9 @@
                         @for(meta <- metas) {
                             @if(meta.isAlcancada){
                                 <ul><b>@meta.getNome()</b><br>
-                                    <u>Descrição:</u> @meta.getDescricao()<br>
-                                    <u>Semana:</u> @meta.getSemana()<br>
-                                    <u>Prioridade:</u> @meta.getPrioridade()<br>
+                                    <p class="text-info">Descrição:</p> @meta.getDescricao()<br>
+                                    <p class="text-info">Semana:</p> @meta.getSemana()<br>
+                                    <p class="text-info">Prioridade:</p> @meta.getPrioridade()<br>
                                 </ul>
                             </ol>
 

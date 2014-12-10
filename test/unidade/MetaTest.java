@@ -85,9 +85,9 @@ public class MetaTest extends AbstractTest{
         assertThat(metas.get(3).getDescricao()).isEqualTo("Dedicar um tempo para o namorado, porque você tá muito ausente");
         assertThat(metas.get(4).getDescricao()).isEqualTo("concluir o lab");
         assertThat(metas.get(5).getDescricao()).isEqualTo("Porque também temos que ter tempo para lazer");
-        assertThat(metas.get(6).getDescricao()).isEqualTo("concluir o lab");
-        assertThat(metas.get(7).getDescricao()).isEqualTo("Partiu CSF o//");
-        assertThat(metas.get(8).getDescricao()).isEqualTo("Tentar conseguir pontos de esculhabação para pagar LOAC!!!");
+        assertThat(metas.get(6).getDescricao()).isEqualTo("Partiu CSF o//");
+        assertThat(metas.get(7).getDescricao()).isEqualTo("Tentar conseguir pontos de esculhabação para pagar LOAC!!!");
+        assertThat(metas.get(8).getDescricao()).isEqualTo("concluir o lab");
         assertThat(metas.get(9).getDescricao()).isEqualTo("Partiu assistir ep novo :)");
 
     }

@@ -8,8 +8,13 @@ b {
     text-decoration: none;
     font-family: sans-serif;
     font-size: 15pt;
+    color: #2b669a;
 }
 
 form {
+    display: inline;
+}
+
+p {
     display: inline;
 }
