@@ -1,30 +1,175 @@
-2014-12-10 18:20:03,403 - [INFO] - from play in pool-7-thread-8 
+2014-12-10 20:07:41,141 - [INFO] - from play in pool-7-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-12-10 18:20:16,262 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-10 20:07:51,155 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2014-12-10 18:20:16,599 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-10 20:07:51,501 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2014-12-10 18:20:19,352 - [INFO] - from application in play-internal-execution-context-1 
+2014-12-10 20:07:54,365 - [INFO] - from application in play-internal-execution-context-1 
 Aplicação inicializada...
 
-2014-12-10 18:20:19,588 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-10 20:07:54,604 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-12-10 18:24:24,705 - [INFO] - from application in play-internal-execution-context-2 
+2014-12-10 20:09:08,108 - [DEBUG] - from application in play-akka.actor.default-dispatcher-8 
+Deletando meta: {} como Mamãe pediu pra lavar, não posso deixar pra depois ://
+
+2014-12-10 20:09:14,128 - [DEBUG] - from application in play-akka.actor.default-dispatcher-12 
+Deletando meta: {} como Ultima prova do ano!!!!!
+
+2014-12-10 20:10:01,964 - [DEBUG] - from application in play-akka.actor.default-dispatcher-15 
+Criando meta: adfadf
+
+2014-12-10 20:10:26,109 - [DEBUG] - from application in play-akka.actor.default-dispatcher-10 
+Deletando meta: {} como procrastinar
+
+2014-12-10 20:14:36,632 - [DEBUG] - from application in play-akka.actor.default-dispatcher-29 
+Criando meta: 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+2014-12-10 20:14:36,641 - [ERROR] - from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-29 
+Value too long for column "NOMEMETA VARCHAR(255)": "'8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888... (757)"; SQL statement:
+insert into Meta (id, alcancada, descricao, nomeMeta, prioridade, semana) values (null, ?, ?, ?, ?, ?) [22001-175]
+
+2014-12-10 20:14:36,733 - [ERROR] - from play in play-akka.actor.default-dispatcher-29 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: org.hibernate.exception.DataException: could not execute statement
+
+2014-12-10 20:14:36,799 - [ERROR] - from application in play-akka.actor.default-dispatcher-29 
+
+
+! @6kf1jlnn5 - Internal server error, for (POST) [/metas] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: org.hibernate.exception.DataException: could not execute statement]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.DataException: could not execute statement
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1387) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1310) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1316) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:881) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	at models.dao.GenericDAO.persist(GenericDAO.java:17) ~[classes/:na]
+	at controllers.Application.novaMeta(Application.java:52) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:103) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:103) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:23) ~[play-java-jpa_2.11-2.3.6.jar:2.3.6]
+	at play.db.jpa.TransactionalAction$1.apply(TransactionalAction.java:21) ~[play-java-jpa_2.11-2.3.6.jar:2.3.6]
+	at play.db.jpa.JPA.withTransactionAsync(JPA.java:180) ~[play-java-jpa_2.11-2.3.6.jar:2.3.6]
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:18) ~[play-java-jpa_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+Caused by: org.hibernate.exception.DataException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:135) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:136) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:96) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:58) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2975) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3487) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:377) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:214) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:194) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:178) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:321) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:125) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:78) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:208) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:151) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:78) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:853) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:827) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:831) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:875) ~[hibernate-entitymanager-4.2.3.Final.jar:4.2.3.Final]
+	... 45 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Value too long for column "NOMEMETA VARCHAR(255)": "'8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888... (757)"; SQL statement:
+insert into Meta (id, alcancada, descricao, nomeMeta, prioridade, semana) values (null, ?, ?, ?, ?, ?) [22001-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.message.DbException.get(DbException.java:172) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:317) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:713) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:152) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.command.dml.Insert.update(Insert.java:115) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.command.Command.executeUpdate(Command.java:253) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154) ~[h2-1.3.175.jar:1.3.175]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140) ~[h2-1.3.175.jar:1.3.175]
+	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:133) ~[hibernate-core-4.2.3.Final.jar:4.2.3.Final]
+	... 66 common frames omitted
+
+2014-12-10 20:15:12,243 - [DEBUG] - from application in play-akka.actor.default-dispatcher-33 
+Criando meta: rttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+
+2014-12-10 20:19:44,798 - [INFO] - from application in play-internal-execution-context-3 
 Aplicação finalizada...
 
-2014-12-10 18:24:25,178 - [INFO] - from play in play-internal-execution-context-2 
+2014-12-10 20:19:45,245 - [INFO] - from play in play-internal-execution-context-3 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2014-12-10 18:24:25,199 - [INFO] - from play in play-internal-execution-context-2 
+2014-12-10 20:19:45,263 - [INFO] - from play in play-internal-execution-context-3 
 database [default] connected at jdbc:h2:mem:play
 
-2014-12-10 18:24:25,577 - [INFO] - from application in play-internal-execution-context-2 
+2014-12-10 20:19:45,688 - [INFO] - from application in play-internal-execution-context-3 
 Aplicação inicializada...
 
-2014-12-10 18:24:25,604 - [INFO] - from play in play-internal-execution-context-2 
+2014-12-10 20:19:45,711 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
+
+2014-12-10 20:21:19,155 - [DEBUG] - from application in play-akka.actor.default-dispatcher-47 
+Criando meta: ewrwer
 

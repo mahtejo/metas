@@ -17,10 +17,10 @@
 [0m[[0minfo[0m] [0mCompiling 4 Java sources to C:\Users\M\Documents\GitHub\metas\target\scala-2.11\test-classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
 [0m[[0mdebug[0m] [0mcom.sun.tools.javac.Main not found with appropriate method signature; forking javac instead[0m
-[0m[[0mdebug[0m] [0mForking javac: javac @C:/Users/M/AppData/Local/Temp/sbt_5d40c4e4/argfile[0m
+[0m[[0mdebug[0m] [0mForking javac: javac @C:/Users/M/AppData/Local/Temp/sbt_f8411375/argfile[0m
 [0m[[0mdebug[0m] [0mjavac returned exit code: 0[0m
-[0m[[0mdebug[0m] [0mJava compilation took 5.085706315 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.884302679 s[0m
+[0m[[0mdebug[0m] [0mJava compilation took 5.901130634 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.843589404 s[0m
 [0m[[0mdebug[0m] [0mInvalidating by inheritance (transitively)...[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\Users\M\Documents\GitHub\metas\test\ClasseMetaTest.java)[0m
 [0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set(C:\Users\M\Documents\GitHub\metas\test\ClasseMetaTest.java)[0m
