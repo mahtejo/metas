@@ -1,0 +1,15 @@
+#divMeta {
+    overflow: auto;
+    width: 538px;
+    height: 380px;
+}
+
+b {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15pt;
+}
+
+form {
+    display: inline;
+}

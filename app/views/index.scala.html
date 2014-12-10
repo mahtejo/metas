@@ -1,0 +1,131 @@
+@(metas: List[Meta])
+
+@main("Metas Semanais") {
+    <html xmlns="http://www.w3.org/1999/html">
+        <head>
+            <title>Minhas Metas</title>
+            <meta charset="UTF-8">
+            <link href="@routes.Assets.at("stylesheets/bootstrap.css")" rel="stylesheet" media="screen">
+            <script src="@routes.Assets.at("javascripts/jquery-2.1.1.min.js")"></script>
+            <script src="@routes.Assets.at("javascripts/myjs.js")"></script>
+            <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+            <script src="@routes.Assets.at("javascripts/inputvalidator.js")"></script>
+
+        </head>
+        <body>
+            <div class="container">
+                <div class="page-header">
+                    <h1>WeekList
+                        <small>O jeito mais fácil de organizar suas metas semanais. </small>
+                    </h1>
+                </div>
+                <br>
+
+
+                <div class="col-md-6" id="criaMeta">
+                    <section class="panel panel-info">
+                        <header class="panel-heading">
+                            <h2 class="panel-title">Criar nova meta da Semana</h2>
+                        </header>
+                    <div class="panel-body">
+                        <form role="form" action="@routes.Application.novaMeta()" method="post">
+                            <div class="form-group">
+                                <label for="meta">Nome</label>
+                                <input type="text" class="form-control" name="nome" placeholder="Digite o nome da Meta"  required data-validation-required-message="Por favor digite um nome para a sua meta.">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Prazo <small>1º, 2º, 3º ou 4º semana do mês (coloque só o número).</small></label>
+                                <input type="number" class="form-control" name="prazo" placeholder="Digite um prazo de 1 a 4"  required data-validation-required-message="Por favor digite um prazo de 1 a 4." min="1" max="4">
+                            </div>
+                            <div class="form-group">
+                                <label for="prioridade">Prioridade</label>
+                                <select class="form-control" name="prioridade">
+                                    <option>Alta</option>
+                                    <option>Média</option>
+                                    <option>Baixa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Descrição</label>
+                                <input type="text" class="form-control" name="descricao" placeholder="Digite uma descricao"  required data-validation-required-message="Por favor digite uma descrição para a sua meta.">
+                            </div>
+                            <input type="submit" class="btn btn-info" value="Criar Meta">
+                        </form><br><br>
+                    </div>
+                        </section>
+                </div>
+
+
+                <div class="col-md-6">
+                    <section class="panel panel-info">
+                    <header class="panel-heading">
+                        <h2 class="panel-title">Minhas Metas</h2>
+                    </header>
+                    <div class="panel-body" id ="divMeta">
+                    <p>Crie metas e as organize. Suas metas estão ordenadas por semana e logo em seguida
+                        por prioridade. No total, você possui @metas.size metas. </p>
+                    <hr>
+                    @if(metas.isEmpty) {
+                        Nenhuma meta cadastrada.
+                    } else {
+                        <ol class="list-group" id="metas">
+                        @for(meta <- metas) {
+                            @if(!meta.isAlcancada){
+                                <ul><b>@meta.getNome()</b><br>
+                                    <u>Descrição:</u> @meta.getDescricao()<br>
+                                    <u>Semana:</u> @meta.getSemana()<br>
+                                    <u>Prioridade:</u> @meta.getPrioridade()<br><br>
+
+                                    <form action="@routes.Application.deleteMetas(meta.getId())" method="post">
+                                        <input type="submit" class="btn btn-danger" value="Desistir">
+                                    </form>
+                                    <form action="@routes.Application.alcancarMeta(meta.getId())" method="post">
+                                        <input type="submit" class="btn btn-success" value="Cumprir Meta">
+                                    </form>
+                                </ul>
+                                <br>
+                                }
+                        }
+                        </ol>
+                    }
+
+
+                </div> </section> </div>
+            </div>
+            <br>
+            <div class="container">
+                    <div class="col-md-12">
+                        <section class="panel panel-success">
+                            <header class="panel-heading">
+                                <h2 class="panel-title">Metas Concluídas</h2>
+                            </header>
+                        <div class="panel-body">
+                            As metas que você marcou como concluídas aparecerão aqui, também ordenadas por prazo e logo em seguida por prioridade.
+                            <hr>
+                                        @if(metas.isEmpty) {
+                        Nenhuma meta cadastrada.
+                    } else {
+                        <ol class="list-group">
+                        @for(meta <- metas) {
+                            @if(meta.isAlcancada){
+                                <ul><b>@meta.getNome()</b><br>
+                                    <u>Descrição:</u> @meta.getDescricao()<br>
+                                    <u>Semana:</u> @meta.getSemana()<br>
+                                    <u>Prioridade:</u> @meta.getPrioridade()<br>
+                                </ul>
+                            </ol>
+
+                    }
+                    }
+                    }
+                </div></section></div></div>
+            <br><br><br>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        </body>
+    </html>
+}
+
+
+

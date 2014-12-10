@@ -1,0 +1,40 @@
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 3 initial tasks for 3 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(funcional.ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@13e3d8d7, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationTest[0m.[36msimpleCheck[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.03 sec[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationTest[0m.[36mrenderTemplate[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationTest[0m.[36mrenderTemplate[0m finished, took 0.75 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.809s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(unidade.MetaTest, sbt.ForkMain$AnnotatedFingerscan@33684a2c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveOrdenarMetas[0m started[0m
+[0m[[31merror[0m] [0mTest unidade.[33mMetaTest[0m.[31mdeveOrdenarMetas[0m failed: expected:<'[concluir o lab]'> but was:<'[Partiu CSF o//]'>, took 10.355 sec[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveOrdenarMetas[0m finished, took 10.356 sec[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveAlcancarMeta[0m started[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveAlcancarMeta[0m finished, took 1.07 sec[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveAdicionarMeta[0m started[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveAdicionarMeta[0m finished, took 0.36 sec[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveIniciarBDVazio[0m started[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mMetaTest[0m.[36mdeveIniciarBDVazio[0m finished, took 0.375 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 12.168s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ClasseMetaTest, sbt.ForkMain$AnnotatedFingerscan@5a02a8cc, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mClasseMetaTest[0m.[36mtestaGetsESets[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mClasseMetaTest[0m.[36mtestaGetsESets[0m finished, took 0.0 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.003s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0mRunner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[31merror[0m] [0mFailed: Total 7, Failed 1, Errors 0, Passed 6[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	ClasseMetaTest[0m
+[0m[[0mdebug[0m] [0m	funcional.ApplicationTest[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	unidade.MetaTest[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
